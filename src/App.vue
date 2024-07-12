@@ -5,3 +5,7 @@
   <Mycounter />
 
 </template>
+
+<script lang="ts" setup>
+import Mycounter from './components/MyCounter.vue'
+</script>
