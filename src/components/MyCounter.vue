@@ -25,10 +25,16 @@ import { computed, ref } from 'vue';
     value: Number
     value: { type: Number, required: true }
 }) */
-const props = defineProps<{
+/* const props = defineProps<{
     value: number
-}>();
+}>(); */
 
+/* Tambien se puede definir un objeto para los props */
+interface Props {
+    value: number;
+}
+
+const props = defineProps<Props>();
 //const counter = ref(10)
 const counter = ref(props.value)
 
