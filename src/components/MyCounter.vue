@@ -20,7 +20,14 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
 
-const counter = ref(10)
+//Recibir propiedades
+const props = defineProps({
+    /* value: Number */
+    value: { type: Number, required: true }
+})
+
+//const counter = ref(10)
+const counter = ref(props.value)
 
 const squereCounter = computed(() => counter.value * counter.value)
 
