@@ -31,12 +31,14 @@ import { computed, ref } from 'vue';
 
 /* Tambien se puede definir un objeto para los props */
 interface Props {
-    value: number;
+    //Puede ser un numero o indefinido
+    value?: number;
 }
 
 const props = defineProps<Props>();
-//const counter = ref(10)
-const counter = ref(props.value)
+
+/* si el valor es indefinido entonces 5 sera el valor por defecto */
+const counter = ref(props.value ?? 5)
 
 const squereCounter = computed(() => counter.value * counter.value)
 
