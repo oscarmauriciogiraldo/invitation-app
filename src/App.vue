@@ -10,10 +10,12 @@
     :value="5"
     defineProps: recibe propiedades del padre al hijo
   -->
-  <Mycounter :value="5" />
+  <Mycounter :value="5" title="Comunicacion entre componente" />
+  <MycounterScript :value="10" />
 
 </template>
 
 <script lang="ts" setup>
 import Mycounter from './components/MyCounter.vue'
+import MycounterScript from './components/MyCounterScript.vue'
 </script>
