@@ -21,10 +21,13 @@
 import { computed, ref } from 'vue';
 
 //Recibir propiedades
-const props = defineProps({
-    /* value: Number */
+/* const props = defineProps({
+    value: Number
     value: { type: Number, required: true }
-})
+}) */
+const props = defineProps<{
+    value: number
+}>();
 
 //const counter = ref(10)
 const counter = ref(props.value)
