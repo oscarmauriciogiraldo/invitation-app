@@ -1,6 +1,6 @@
 <template>
     <h1>
-        Hola soy el componente reutilizable 3
+        Hola soy el componente reutilizable 3: MyCounterScript2
         <br>
         Separando logica
 
@@ -25,5 +25,5 @@
 
 </template>
 
-<script src="./MyCouonterScript2.ts">
+<script src="./MyCounterScript2.ts">
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <h1>Hola soy el componente reutilizable <br>
+    <h1>Hola soy el componente reutilizable: MyCounter <br>
         utilizando composables
 
     </h1>

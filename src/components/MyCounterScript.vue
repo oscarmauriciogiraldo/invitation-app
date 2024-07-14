@@ -1,8 +1,8 @@
 <template>
     <h1>
-        Hola soy el componente reutilizable 2
-
-
+        Hola soy el componente reutilizable 2: MyCounterScript
+        <br>
+        tambien reutilizando la logica
     </h1>
     <section>
 
@@ -24,7 +24,8 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue';
+import { useCounter } from '@/composables/useCounter';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
     props: {
@@ -33,8 +34,7 @@ export default defineComponent({
 
     setup(props) {
 
-        const counter = ref(props.value)
-        const squereCounter = computed(() => counter.value * counter.value)
+        const { counter, squereCounter } = useCounter(props.value);
 
         return {
             counter,

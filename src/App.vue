@@ -4,7 +4,7 @@
   <!-- <WelcomComponent /> -->
   <Mycounter :value="5" title="Comunicacion entre componente" />
   <MycounterScript :value="10" />
-  <MyCouonterScript2 :value="20" />
+  <MyCounterScript2 :value="25" />
 
 
 </template>
@@ -12,6 +12,6 @@
 <script lang="ts" setup>
 import Mycounter from './components/MyCounter.vue'
 import MycounterScript from './components/MyCounterScript.vue'
-import MyCouonterScript2 from './components/MyCounterScript2/MyCouonterScript2';
+import MyCounterScript2 from './components/MyCounterScript2/MyCounterScript2.vue';
 /* import WelcomComponent from './components/welcome-component/WelcomComponent.vue'; */
 </script>
