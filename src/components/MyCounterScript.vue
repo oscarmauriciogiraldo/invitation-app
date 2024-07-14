@@ -11,7 +11,7 @@
 
         <h3>Square2: {{ squereCounter }}</h3>
 
-
+        <h4>{{ title }}</h4>
 
         <div class="containerButton">
             <!-- vue extre el valor reactivo para utilizarlo aca -->
@@ -29,7 +29,8 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
     props: {
-        value: { type: Number, required: true }
+        value: { type: Number, required: true },
+        title: { type: String, requred: true },
     },
 
     setup(props) {

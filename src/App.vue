@@ -3,7 +3,7 @@
   <hr>
   <!-- <WelcomComponent /> -->
   <Mycounter :value="5" title="Comunicacion entre componente" />
-  <MycounterScript :value="10" />
+  <MycounterScript :value="10" title="Comunicacion entre componente props 2" />
   <MyCounterScript2 :value="25" />
 
 

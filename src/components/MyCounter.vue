@@ -10,7 +10,7 @@
 
         <h3>Square: {{ squereCounter }}</h3>
 
-        <!-- <h4>{{ props.title }}</h4> -->
+        <h4>{{ props.title }}</h4>
 
         <div class="containerButton">
             <!-- vue extre el valor reactivo para utilizarlo aca -->
@@ -25,8 +25,16 @@
 <script lang="ts" setup>
 import { useCounter } from '../composables/useCounter';
 
+interface Props {
+    //Puede ser un numero o indefinido
+    value: number;
+    title: string;
+}
 
-const { counter, squereCounter } = useCounter(15);
+const props = defineProps<Props>();
+
+//const { counter, squereCounter } = useCounter(15);
+const { counter, squereCounter } = useCounter(props.value);
 //Recibir propiedades
 /* const props = defineProps({
     value: Number
@@ -37,11 +45,5 @@ const { counter, squereCounter } = useCounter(15);
 }>(); */
 
 /* Tambien se puede definir un objeto para los props */
-/* interface Props {
-    //Puede ser un numero o indefinido
-    value: number;
-    title: string;
-}
 
-const props = defineProps<Props>(); */
 </script>
