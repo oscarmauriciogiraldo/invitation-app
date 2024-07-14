@@ -1,5 +1,8 @@
 <template>
-    <h1>Hola soy el componente reutilizable</h1>
+    <h1>Hola soy el componente reutilizable <br>
+        utilizando composables
+
+    </h1>
     <section>
 
 
@@ -23,7 +26,7 @@
 import { useCounter } from '../composables/useCounter';
 
 
-const { counter, squereCounter } = useCounter();
+const { counter, squereCounter } = useCounter(15);
 //Recibir propiedades
 /* const props = defineProps({
     value: Number
