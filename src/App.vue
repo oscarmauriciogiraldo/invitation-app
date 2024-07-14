@@ -12,6 +12,6 @@
 <script lang="ts" setup>
 import Mycounter from './components/MyCounter.vue'
 import MycounterScript from './components/MyCounterScript.vue'
-import MyCounterScript2 from './components/MyCounterScript2/MyCounterScript2.vue';
+import MyCounterScript2 from './components/MyCounterScript2/MyCounterScript2';
 /* import WelcomComponent from './components/welcome-component/WelcomComponent.vue'; */
 </script>
