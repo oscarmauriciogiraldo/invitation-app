@@ -13,12 +13,15 @@
 
         <h3>Square2: {{ squereCounter }}</h3>
 
-
+        <h4>{{ title }}</h4>
 
         <div class="containerButton">
             <!-- vue extre el valor reactivo para utilizarlo aca -->
             <button class="mainButton" @click="counter++">+ 1</button>
             <button @click="counter--">- 1</button>
+
+            <button class="mainButton" @click="functionPrueba"> {{ nameBtn }} </button>
+
         </div>
     </section>
 
@@ -27,3 +30,5 @@
 
 <script src="./MyCounterScript2.ts">
 </script>
+
+<style lang="scss" src="./MyCounterScript.scss" />
