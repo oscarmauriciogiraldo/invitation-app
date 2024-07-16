@@ -23,6 +23,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+defineEmits<{
+    sendMessage: [text: string]
+}>();
+
 
 //manera sencilla 
 
