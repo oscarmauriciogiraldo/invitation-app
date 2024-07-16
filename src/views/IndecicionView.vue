@@ -5,7 +5,7 @@
         </div>
 
         <!-- Chat box -->
-        <ChatMessages />
+        <ChatMessages :messages="messages" />
 
         <!-- Message Box -->
         <MessageBox />
@@ -15,4 +15,20 @@
 <script lang="ts" setup>
 import ChatMessages from '@/components/chat/ChatMessages.vue'
 import MessageBox from '@/components/chat/MessageBox.vue'
+import type { ChatMessage } from '@/interfaces/chat-message.interface';
+import { ref } from 'vue';
+
+const messages = ref<ChatMessage[]>([
+    {
+        id: new Date().getTime() + 1,
+        message: 'Hola mundo !!',
+        itsMine: true,
+    },
+    {
+        id: new Date().getTime(),
+        message: 'Si',
+        itsMine: false,
+        image: 'https://yesno.wtf/assets/no/13-755222c98795431aa2e7d453ab1e75a1.gif'
+    },
+]);
 </script>

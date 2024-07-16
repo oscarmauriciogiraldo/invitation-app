@@ -11,4 +11,11 @@
 
 <script lang="ts" setup>
 import ChatBubble from '@/components/chat/ChatBubble.vue'
+import type { ChatMessage } from '@/interfaces/chat-message.interface';
+
+interface Props {
+    messages: ChatMessage[];
+}
+
+defineProps<Props>();
 </script>
