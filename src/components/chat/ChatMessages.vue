@@ -6,8 +6,10 @@
             <ChatBubble :its-mine="false" :message="'no'"
                 image="https://yesno.wtf/assets/no/13-755222c98795431aa2e7d453ab1e75a1.gif" /> -->
 
-            <ChatBubble v-for="message in messages" :key="message.id" :its-mine="message.itsMine"
-                :message="message.message" :image="message.image" />
+            <!--  <ChatBubble v-for="message in messages" :key="message.id" :its-mine="message.itsMine"
+                :message="message.message" :image="message.image" /> -->
+
+            <ChatBubble v-for="message in messages" :key="message.id" v-bind="message" />
         </div>
     </div>
 </template>
