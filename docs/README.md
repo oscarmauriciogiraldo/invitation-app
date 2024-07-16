@@ -13,5 +13,5 @@
 
     <ChatBubble />
     <ChatBubble its-mine="true"/> --> Esto enviaria un string entonces
-    <ChatBubble :its-mine="true" /> --> Esto enviaria el valor booleano
+    <ChatBubble :its-mine="true" /> --> Esto enviaria el valor booleano --> esto es el v-bind
     <ChatBubble its-mine /> --> enviaria simplemente un valor booleano
