@@ -26,7 +26,7 @@ const messages = ref<ChatMessage[]>([
     },
     {
         id: new Date().getTime(),
-        message: 'Si',
+        message: 'No !!',
         itsMine: false,
         image: 'https://yesno.wtf/assets/no/13-755222c98795431aa2e7d453ab1e75a1.gif'
     },
