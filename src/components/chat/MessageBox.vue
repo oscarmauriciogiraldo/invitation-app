@@ -3,9 +3,9 @@
         <input type="text" placeholder="Type your message..."
             class="flex-1 border rounded-full px-4 py-2 focus:outline-none"
             v-model="message" 
-            @keypress.enter="sendmessage"/>
+            @keypress.enter="sendMessage"/>
         <button class="bg-blue-500 text-white rounded-full p-2 ml-2 hover:bg-blue-600 focus:outline-none"
-            @click="sendmessage">
+            @click="sendMessage">
             <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                 stroke="#ffffff">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -23,20 +23,22 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-defineEmits<{
+
+//Emmitir eventos hacia el componente padre
+const emits = defineEmits<{
     sendMessage: [text: string]
 }>();
 
 
 //manera sencilla 
-
 //Capturar el mensaje con una propiedad reactiva
 const message = ref('')
 
-const sendmessage = () => {
+const sendMessage = () => {
     if (!message.value) return
 
-    console.log('mostrando mensaje:  ->', message.value);
+    /* console.log('mostrando mensaje:  ->', message.value); */
+    emits('sendMessage', message.value)
 
     message.value = ''
 }
