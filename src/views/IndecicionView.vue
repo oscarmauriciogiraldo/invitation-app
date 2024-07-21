@@ -8,7 +8,11 @@
         <ChatMessages :messages="messages" />
 
         <!-- Message Box -->
-        <MessageBox @send-message="onMessage($event)" />
+        <!-- <MessageBox @send-message="onMessage($event)" /> -->
+        <!-- Forma corta -->
+        <MessageBox @send-message="onMessage" />
+
+        <MessageBox @send-message="onNewMessage" />
     </div>
 </template>
 
@@ -38,5 +42,9 @@ const onMessage = (text: string) => {
         itsMine: true,
         message: text
     })
+}
+
+const onNewMessage = (text: string) => {
+    console.log('otra funcion', text)
 }
 </script>
