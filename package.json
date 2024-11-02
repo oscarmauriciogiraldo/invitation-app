@@ -13,6 +13,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "invitation-app": "file:",
     "vue": "^3.4.29"
   },
   "devDependencies": {
